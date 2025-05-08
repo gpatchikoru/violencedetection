@@ -1,0 +1,7 @@
+*.pyc
+__pycache__/
+uploads/
+venv/
+.env
+*.pth
+*.h5

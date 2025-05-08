@@ -1,0 +1,17 @@
+Best threshold: 0.50
+Best accuracy: 0.9313
+
+Classification Report:
+              precision    recall  f1-score   support
+
+ NonViolence       0.93      0.93      0.93       951
+    Violence       0.93      0.93      0.93      1000
+
+    accuracy                           0.93      1951
+   macro avg       0.93      0.93      0.93      1951
+weighted avg       0.93      0.93      0.93      1951
+
+Confusion Matrix:
+[[884  67]
+ [ 67 933]]
+ROC AUC: 0.9743

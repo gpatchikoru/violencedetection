@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Violence Detection Results</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 800px;
+        }
+        .results-card {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+        .violence-true {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .violence-false {
+            color: #198754;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Violence Detection Results</h1>
+        
+        <div class="results-card">
+            <h3>Analysis for: {{ video_name }}</h3>
+            
+            <div class="mt-4">
+                <h4>Overall Assessment: 
+                    <span class="{% if results.is_violent %}violence-true{% else %}violence-false{% endif %}">
+                        {% if results.is_violent %}VIOLENCE{% else %}NON-VIOLENCE{% endif %}
+                    </span>
+                </h4>
+                
+                {% if results.reasons %}
+                <div class="mt-3">
+                    <h5>Reasons:</h5>
+                    <ul>
+                        {% for reason in results.reasons %}
+                        <li>{{ reason }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                
+                <div class="mt-4">
+                    <h5>Detailed Analysis:</h5>
+                    <ul>
+                        <li>Average probability: {{ "%.4f"|format(results.avg_prob) }}</li>
+                        <li>Maximum probability: {{ "%.4f"|format(results.max_prob) }}</li>
+                        <li>Probability spread: {{ "%.4f"|format(results.prob_spread) }}</li>
+                        <li>Violent segments: {{ results.violence_segments }}/{{ results.total_segments }} 
+                            ({{ "%.0f%%"|format(results.violence_ratio * 100) }})</li>
+                        <li>Maximum consecutive violent segments: {{ results.max_consecutive }}</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h5>Probability Graph:</h5>
+                    <img src="data:image/png;base64,{{ results.plot_img }}" class="img-fluid" alt="Violence Probability Graph">
+                </div>
+                
+                <div class="mt-4">
+                    <a href="/" class="btn btn-primary">Analyze Another Video</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Violence Detection System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 800px;
+        }
+        .upload-form {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Violence Detection System</h1>
+        
+        <div class="upload-form">
+            <h3>Upload Video for Analysis</h3>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="video" class="form-label">Select Video File (MP4, AVI, MOV)</label>
+                    <input type="file" class="form-control" id="video" name="video" accept=".mp4,.MP4,.avi,.mov">
+                </div>
+                <button type="submit" class="btn btn-primary">Analyze Video</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

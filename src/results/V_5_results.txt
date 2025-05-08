@@ -1,0 +1,40 @@
+Timestamp (s) | Violence Probability | Prediction
+------------------------------------------------------------
+  0.00s     | 0.3625              | NON-VIOLENCE
+  0.21s     | 0.3702              | NON-VIOLENCE
+  0.41s     | 0.3713              | NON-VIOLENCE
+  0.62s     | 0.3456              | NON-VIOLENCE
+  0.82s     | 0.3130              | NON-VIOLENCE
+  1.03s     | 0.2880              | NON-VIOLENCE
+  1.23s     | 0.2712              | NON-VIOLENCE
+  1.44s     | 0.2531              | NON-VIOLENCE
+  1.64s     | 0.2192              | NON-VIOLENCE
+  1.85s     | 0.2052              | NON-VIOLENCE
+  2.05s     | 0.2058              | NON-VIOLENCE
+  2.26s     | 0.2046              | NON-VIOLENCE
+  2.46s     | 0.2062              | NON-VIOLENCE
+  2.67s     | 0.2071              | NON-VIOLENCE
+  2.87s     | 0.2058              | NON-VIOLENCE
+  3.08s     | 0.2099              | NON-VIOLENCE
+  3.29s     | 0.2058              | NON-VIOLENCE
+  3.49s     | 0.2176              | NON-VIOLENCE
+  3.70s     | 0.2283              | NON-VIOLENCE
+  3.90s     | 0.2331              | NON-VIOLENCE
+  4.11s     | 0.2235              | NON-VIOLENCE
+  4.31s     | 0.2079              | NON-VIOLENCE
+  4.52s     | 0.1988              | NON-VIOLENCE
+  4.72s     | 0.2144              | NON-VIOLENCE
+  4.93s     | 0.2489              | NON-VIOLENCE
+
+Detailed Analysis:
+- Average probability: 0.2487
+- Maximum probability: 0.3713
+- Probability spread: 0.1725
+- Violent segments: 0/25 (0%)
+- Maximum consecutive violent segments: 0
+- Rapid movement segments: 25/25
+- Using adjusted threshold: 0.55
+- Minimum probability threshold: 0.1
+
+Overall assessment: VIOLENCE
+
